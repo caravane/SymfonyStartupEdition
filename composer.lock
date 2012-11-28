@@ -564,12 +564,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/facebook/facebook-php-sdk.git",
-                "reference": "v3.2.0"
+                "reference": "v3.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/facebook/facebook-php-sdk/archive/v3.2.0.zip",
-                "reference": "v3.2.0",
+                "url": "https://github.com/facebook/facebook-php-sdk/archive/v3.2.1.zip",
+                "reference": "v3.2.1",
                 "shasum": ""
             },
             "require": {
@@ -577,7 +577,7 @@
                 "ext-curl": "*",
                 "ext-json": "*"
             },
-            "time": "1344965300",
+            "time": "1354055657",
             "type": "library",
             "installation-source": "source",
             "autoload": {
