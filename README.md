@@ -1,4 +1,4 @@
-Symfony Bootstrap Edition
+Symfony Social Edition
 ========================
 
 A symfony ready to use empty app with
