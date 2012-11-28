@@ -5,6 +5,9 @@ A symfony ready to use empty app with
 - jquery
 - jquery-ui
 - bootstrap
+- lessphp
+- js routing (FOSJsRoutingBundle)
+- user (FOSUserBundle)
 - facebook login (FOSFacebookBundle)
-- google login (FOSFGoogleBundle)
+- google login (FOSGoogleBundle)
 - twitter login (FOSTwitterBundle)
