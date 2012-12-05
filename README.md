@@ -1,4 +1,4 @@
-Symfony Social Edition
+Symfony Startup Edition
 ========================
 
 A symfony ready to use empty app with
