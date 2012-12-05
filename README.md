@@ -73,5 +73,6 @@ Customize TwitterBootstrap
 - dump assets, clear cache
 
 
-
+Screenshot
+========================
 ![ScreenShot](http://github.com/caravane/SymfonyStartupEdition/raw/master/web/images/screenshot.png)
