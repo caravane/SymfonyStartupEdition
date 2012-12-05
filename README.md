@@ -6,12 +6,12 @@ A symfony ready to use empty app with
 - jquery-ui
 - twitter bootstrap
 - lessphp
-- js routing (FOSJsRoutingBundle)
-- user (FOSUserBundle)
+- js routing (FOSJsRoutingBundle https://github.com/FriendsOfSymfony/FOSJSRoutingBundle)
+- user (FOSUserBundle https://github.com/FriendsOfSymfony/FOSFUserBundle)
 - facebook login (FOSFacebookBundle https://github.com/FriendsOfSymfony/FOSFacebookBundle)
-- google login (FOSGoogleBundle)
-- twitter login (FOSTwitterBundle)
-
+- google login (FOSGoogleBundle https://https://github.com/bitgandtter/FOSGoogleBundle)
+- twitter login (FOSTwitterBundle https://github.com/FriendsOfSymfony/FOSTwitterBundle)
+- and some more...
 
 
 Installation
@@ -48,4 +48,15 @@ Edit config files:
     googleClient_id="xxxxxxx.apps.googleusercontent.com"
     googleClient_secret="xxxxx-xxxxxxxx"
     googleCallback_url="http://example.com/app_dev.php/login_google_check"
+```
+
+
+Generate User Document
+``` bash
+php app/console doctrine:mongodb:generate:documents CaravaneUserBundle
+```
+
+Create MongoDB schema
+``` bash
+php app/console doctrine:mongodb:schema:create
 ```
