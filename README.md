@@ -14,6 +14,10 @@ A symfony ready to use empty app with
 - and some more...
 
 
+Prerequisites
+========================
+This version requires Symfony 2.1
+
 Installation
 ========================
  * Note: MongoDB only configuration by now, but easy to port to ORM *
