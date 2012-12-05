@@ -26,7 +26,6 @@ class AppKernel extends Kernel
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new FOS\GoogleBundle\FOSGoogleBundle(),
             new Caravane\NooneatBundle\CaravaneNooneatBundle(),
-            //new Caravane\LunchBundle\CaravaneLunchBundle(),
             new Caravane\UserBundle\CaravaneUserBundle(),
         );
 
