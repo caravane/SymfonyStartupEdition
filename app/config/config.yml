@@ -95,7 +95,7 @@ doctrine_mongodb:
         default:
             server: mongodb://127.0.0.1:27017
             options: {}
-    default_database: nooneat
+    default_database: xxxxxxxxxxxxxxxxxx
     document_managers:
         default:
             auto_mapping: true
