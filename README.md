@@ -97,7 +97,7 @@ Create MongoDB schema
 
 Customize TwitterBootstrap
 ========================
-- Edit file src/Caravane/NooneatBundle/resources/public/css/variables.less
+- Edit file src/Caravane/NooneatBundle/resources/public/css/variables.less (or http://www.boottheme.com/#generatetheme ? )
 - dump assets, clear cache
 
 
