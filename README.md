@@ -2,10 +2,10 @@ Symfony Startup Edition
 ========================
 
 A symfony ready to use empty app with
-- jquery
-- jquery-ui
-- twitter bootstrap
-- lessphp
+- jquery (http://jquery.com)
+- jquery-ui (http://jquery-ui.com)
+- twitter bootstrap (http://twitter.github.com/bootstrap/)
+- lessphp (https://github.com/leafo/lessphp)
 - js routing (FOSJsRoutingBundle https://github.com/FriendsOfSymfony/FOSJSRoutingBundle)
 - user (FOSUserBundle https://github.com/FriendsOfSymfony/FOSFUserBundle)
 - facebook login (FOSFacebookBundle https://github.com/FriendsOfSymfony/FOSFacebookBundle)
