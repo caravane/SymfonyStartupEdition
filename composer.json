@@ -80,13 +80,9 @@
                "version": "master",
                "name": "twitter/bootstrap",
                "source": {
-                   "url": "https://github.com/twitter/bootstrap.git",
+		   "url": "https://github.com/caravane/bootstrap",
                    "type": "git",
                    "reference": "master"
-               },
-               "dist": {
-                   "url": "https://github.com/twitter/bootstrap/zipball/master",
-                   "type": "zip"
                }
            }
        },
