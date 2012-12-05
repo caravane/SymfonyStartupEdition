@@ -72,4 +72,6 @@ Customize TwitterBootstrap
 - Edit file src/Caravane/NooneatBundle/resources/public/css/variables.less
 - dump assets, clear cache
 
-```
+
+
+![ScreenShot](https://raw.https://github.com/caravane/SymfonyStartupEdition/edit/master/web/images//screenshot.png)
