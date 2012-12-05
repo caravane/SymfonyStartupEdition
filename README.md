@@ -20,7 +20,7 @@ This version requires Symfony 2.1
 
 Installation
 ========================
- * Note: MongoDB only configuration by now, but easy to port to ORM *
+ * Note: Not tested with ORM, MongoDB only (feedback welcome)
 
 
 Update vendors
@@ -28,6 +28,34 @@ Update vendors
 $ php composer.phar update
 ```
 Edit config files:
+
+- ODM only:
+in app/config/config.yml
+```
+doctrine_mongodb:
+    connections:
+        default:
+            server: mongodb://127.0.0.1:27017 //or any
+            options: {}
+    default_database: xxxxxxxxxxxxxxxxxx
+    document_managers:
+        default:
+            auto_mapping: true
+```
+
+- ORM 
+in app/config/parameters.yml
+```
+parameters:
+    ...
+    database_host: localhost // or any
+    database_name: xxxxxxx
+    database_user: xxxxxxx
+    database_password: xxxxxxx
+    ...
+```
+
+
 - app/config/parameters.facebook.ini
 ```
 [parameters]
