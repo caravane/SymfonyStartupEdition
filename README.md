@@ -69,7 +69,7 @@ php app/console doctrine:mongodb:schema:create
 
 Customize TwitterBootstrap
 ========================
-- Edit file src/Caravane/NooneatBundle/resources/public/ccc/variables.less
+- Edit file src/Caravane/NooneatBundle/resources/public/css/variables.less
 - dump assets, clear cache
 
 ```
