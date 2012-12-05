@@ -1,60 +1,63 @@
+
+
 jms_security_extra:
     secure_all_services: false
     expressions: true
 
 security:
-    encoders:
-        #Symfony\Component\Security\Core\User\User: plaintext
-        FOS\UserBundle\Model\UserInterface: sha512
-
-    role_hierarchy:
-        ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+    #factories:
+    #    - "%kernel.root_dir%/../vendor/bundles/FOS/FacebookBundle/Resources/config/security_factories.xml"
 
     providers:
+        my_fos_facebook_provider:
+            id: my.facebook.user
+        #fos_twitter:
+        #   id: fos_twitter.auth
+        my_fos_twitter_provider:
+            id: my.twitter.user
+        my_fos_google_provider:
+            id: my.google.user
         fos_userbundle:
-            id: fos_user.user_provider.username
-        in_memory:
-            memory:
-                users:
-                    user:  { password: userpass, roles: [ 'ROLE_USER' ] }
-                    admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
-
+            id: fos_user.user_manager
+    encoders:
+        FOS\UserBundle\Model\UserInterface: sha512
     firewalls:
         main:
             pattern: ^/
             form_login:
                 provider: fos_userbundle
                 csrf_provider: form.csrf_provider
-            logout:       true
-            anonymous:    true
+            fos_facebook:
+                app_url: %facebookAppUrl%
+                server_url: %facebookServerUrl%
+                login_path: /login/facebook
+                check_path: /login_fb_check
+                default_target_path: /
+                provider: my_fos_facebook_provider
+            fos_twitter:
+                login_path: /login/twitter
+                check_path: /login_twitter_check
+                default_target_path: /
+                provider: my_fos_twitter_provider
+                #use_twitter_anywhere: true
+                #success_handler: ajax_success_handler
+                #failure_handler: ajax_failure_handler
+            fos_google:
+                login_path: /login/google
+                check_path: /login_google_check
+                provider: my_fos_google_provider
 
-        dev:
-            pattern:  ^/(_(profiler|wdt)|css|images|js)/
-            security: false
-
-        login:
-            pattern:  ^/demo/secured/login$
-            security: false
-
-        secured_area:
-            pattern:    ^/demo/secured/
-            form_login:
-                check_path: /demo/secured/login_check
-                login_path: /demo/secured/login
             logout:
-                path:   /demo/secured/logout
-                target: /demo/
-            #anonymous: ~
-            #http_basic:
-            #    realm: "Secured Demo Area"
+                handlers: ["fos_facebook.logout_handler"]
+                delete_cookies: ["twitter_anywhere_identity"]
+            anonymous:    true
 
     access_control:
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/slide, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
-
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
         ROLE_SUPER_ADMIN: ROLE_ADMIN

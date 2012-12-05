@@ -1,0 +1,30 @@
+{% extends "CaravaneUserBundle::layout.html.twig" %}
+
+	{% block main %}<h1>{{entity.name}}</h1>
+	<div class="row">
+<div class="span5">
+<form id="user_restaurant_edit" action="{{ path('user_restaurant_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+    {{ form_widget(edit_form) }}
+    <p>
+        <button type="submit">Edit</button>
+    </p>
+</form>
+</div>
+<div class="span7">
+	<div id="map"></div>
+</div>
+</div>
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('user_restaurant') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('user_restaurant_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
+{% endblock %}

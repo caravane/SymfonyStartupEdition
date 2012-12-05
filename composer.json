@@ -1,6 +1,6 @@
 {
     "name": "symfony/framework-standard-edition",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "Nooneat distribution",
     "autoload": {
         "psr-0": { "": "src/" }
     },
@@ -20,6 +20,7 @@
         "jms/security-extra-bundle": "1.2.*",
         "jms/di-extra-bundle": "1.1.*",
         "jms/di-extra-bundle": "1.1.*",
+        "doctrine/doctrine-fixtures-bundle": "dev-master",
         "jquery/jquery": "master",
         "jquery/jquery-ui": "master",
         "twitter/bootstrap": "master",
@@ -29,7 +30,8 @@
         "friendsofsymfony/twitter-bundle": "dev-master",
         "friendsofsymfony/jsrouting-bundle": "dev-master",
         "bitgandtter/google-bundle": "dev-master",
-        "twitteroauth": "dev-master"
+        "twitteroauth": "dev-master",
+        "avalanche123/imagine-bundle": "v2.1"
     },
     "scripts": {
         "post-install-cmd": [

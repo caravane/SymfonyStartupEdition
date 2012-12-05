@@ -1,7 +1,37 @@
 imports:
     - { resource: parameters.yml }
+    - { resource: parameters.facebook.ini }
+    - { resource: parameters.twitter.ini }
+    - { resource: parameters.google.ini }
     - { resource: security.yml }
-    - { resource: facebookParameters.ini }
+
+
+services:
+    my.facebook.user:
+        class: Caravane\UserBundle\Security\User\Provider\FacebookProvider
+        arguments:
+            facebook: "@fos_facebook.api"
+            userManager: "@fos_user.user_manager"
+            validator: "@validator"
+            container: "@service_container"
+    my.twitter.user:
+        class: Caravane\UserBundle\Security\User\Provider\TwitterProvider
+        arguments:
+            twitter_oauth: "@fos_twitter.api"
+            userManager: "@fos_user.user_manager"
+            validator: "@validator"
+            session: "@session"
+    my.google.user:
+        class: Caravane\UserBundle\Security\User\Provider\GoogleProvider
+        arguments:
+            twitter_oauth: "@fos_google.api"
+            userManager: "@fos_user.user_manager"
+            validator: "@validator"
+
+
+
+
+
 
 framework:
     #esi:             ~
@@ -25,6 +55,7 @@ twig:
     strict_variables: false
     globals:
         facebookLocale:          %facebookLocale%
+        twitterCallbackUrl:          %twitterCallback_url%
 
 # Assetic Configuration
 assetic:
@@ -62,7 +93,7 @@ doctrine:
 doctrine_mongodb:
     connections:
         default:
-            server: mongodb://localhost:27017
+            server: mongodb://127.0.0.1:27017
             options: {}
     default_database: nooneat
     document_managers:
@@ -95,16 +126,16 @@ fos_facebook:
 
 fos_twitter:
         file: %kernel.root_dir%/../vendor/twitteroauth/twitteroauth/twitteroauth.php
-        consumer_key: y23OA2JO0BxlYUseKK0A
-        consumer_secret: tOo47iHOaqcNr97rhADTZET5DSQj8BoYZehGl8fp7p8
-        callback_url: http://www.example.com/login_check
+        consumer_key: %twitterConsumer_key%
+        consumer_secret:  %twitterConsumer_secret%
+        callback_url:   %twitterCallback_url%
 
 fos_google:
-    app_name: nooneat
-    client_id: 964811605691.apps.googleusercontent.com
-    client_secret: BqhVQ-RGL1WgcoZ28kDp386b
+    app_name: %googleApp_name%
+    client_id: %googleClient_id%
+    client_secret: %googleClient_secret%
     state: auth
     access_type: online
     scopes: [userinfo.email, userinfo.profile]
     approval_prompt: auto
-    callback_url: http://www.nooneat.com/login_check
+    callback_url: %googleCallback_url%

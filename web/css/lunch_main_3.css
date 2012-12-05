@@ -1,0 +1,65 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/folders\/f0\/1shwhjv542lcf2mcyx3wppm40000gn\/T\/assetic_compassT12IH0\.scss}line{font-family:\000033}}
+html, body {
+  height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/folders\/f0\/1shwhjv542lcf2mcyx3wppm40000gn\/T\/assetic_compassT12IH0\.scss}line{font-family:\000036}}
+body .navbar-fixed-top .navbar-inner, body .navbar-fixed-bottom .navbar-inner {
+  padding: 0 10px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/folders\/f0\/1shwhjv542lcf2mcyx3wppm40000gn\/T\/assetic_compassT12IH0\.scss}line{font-family:\0000314}}
+form#mainSearch .controls .input-append button {
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/folders\/f0\/1shwhjv542lcf2mcyx3wppm40000gn\/T\/assetic_compassT12IH0\.scss}line{font-family:\0000321}}
+#body {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/folders\/f0\/1shwhjv542lcf2mcyx3wppm40000gn\/T\/assetic_compassT12IH0\.scss}line{font-family:\0000331}}
+#footer #loginForm label {
+  color: #ffffff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/folders\/f0\/1shwhjv542lcf2mcyx3wppm40000gn\/T\/assetic_compassT12IH0\.scss}line{font-family:\0000334}}
+#footer #loginForm button, #footer #loginForm input {
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/folders\/f0\/1shwhjv542lcf2mcyx3wppm40000gn\/T\/assetic_compassT12IH0\.scss}line{font-family:\0000337}}
+#footer #loginForm input.input-small {
+  padding: 2px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/folders\/f0\/1shwhjv542lcf2mcyx3wppm40000gn\/T\/assetic_compassT12IH0\.scss}line{font-family:\0000346}}
+#header #lunchesListTools .btn-toolbar {
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/folders\/f0\/1shwhjv542lcf2mcyx3wppm40000gn\/T\/assetic_compassT12IH0\.scss}line{font-family:\0000353}}
+body.map #map {
+  height: 100%;
+  width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/folders\/f0\/1shwhjv542lcf2mcyx3wppm40000gn\/T\/assetic_compassT12IH0\.scss}line{font-family:\0000360}}
+body.layout {
+  /*background-image:url(/images/backgrounds/1.jpg);*/
+  background: #000000;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/folders\/f0\/1shwhjv542lcf2mcyx3wppm40000gn\/T\/assetic_compassT12IH0\.scss}line{font-family:\0000364}}
+body.layout #content {
+  background: #ededed;
+  /* padding:40px 0; */
+  height: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/folders\/f0\/1shwhjv542lcf2mcyx3wppm40000gn\/T\/assetic_compassT12IH0\.scss}line{font-family:\0000369}}
+body.layout #content .inner {
+  margin-top: 50px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/folders\/f0\/1shwhjv542lcf2mcyx3wppm40000gn\/T\/assetic_compassT12IH0\.scss}line{font-family:\0000377}}
+#user_restaurant_edit #map {
+  height: 300px;
+}

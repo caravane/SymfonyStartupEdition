@@ -1,0 +1,11 @@
+<h1>Lunches around you</h1>
+<ul>
+	{% for entity in entities %}
+	<li class="{{entity.categorySlug}}" data-id="{{entity.id}}" data-category="{{entity.categorySlug}}"  data-price="{{entity.price}}" data-distance="{{entity.distance}}">
+		<div class="lunch">{{ entity.lunchName }}</div>
+		<div class="restaurant" data-lat="{{entity.lat}}" data-lng="{{entity.lng}}">{{ entity.restaurantName }}</div>
+		<div class="price">{{ entity.price }} {{entity.currency}}</div>
+		<div class="distance">{{ entity.distance }} km</div>
+	</li>
+	{% endfor %}
+</ul>

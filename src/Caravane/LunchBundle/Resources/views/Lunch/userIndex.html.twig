@@ -1,0 +1,46 @@
+{% extends "CaravaneUserBundle::layout.html.twig" %}
+
+	{% block main %}<h1>My lunches</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+             <th>Restaurant</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('user_lunch_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.lunchName }}</td>
+            <td>{{ entity.price }}</td>
+            <td>{{ entity.restaurantName }}</td>
+            <td>{{ entity.status }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('user_lunch_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('user_lunch_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('user_lunch_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
+{% endblock %}

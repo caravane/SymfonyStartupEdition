@@ -3,6 +3,18 @@ caravane_caravane_nooneat:
     type:     annotation
     prefix:   /
 
+caravane_login:
+    resource: "@CaravaneUserBundle/Controller/"
+    type:     annotation
+    prefix:   /login
+
+login_google:
+    pattern: /login/google
+    defaults:  { _controller: FOSGoogleBundle:Security:login }
+    options:
+        expose: true
+
+
 # Internal routing configuration to handle ESI
 #_internal:
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
@@ -34,14 +46,26 @@ fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
 
 
-fos_login_check:
+fos_login_fb_check:
     pattern:  /login_fb_check
-    defaults:  { _controller: SocialShowerUserBundle:Security:check }
+    defaults:  { _controller: CaravaneUserBundle:Security:check }
+    options:
+        expose: true
+
+fos_login_twitter_check:
+    pattern:  /login_twitter_check
+    defaults:  { _controller: CaravaneUserBundle:Security:check }
+    options:
+        expose: true
+
+fos_login_google_check:
+    pattern:  /login_google_check
+    defaults:  { _controller: CaravaneUserBundle:Security:check }
     options:
         expose: true
 
 fos_logout:
     pattern:  /logout
-    defaults:  { _controller: SocialShowerUserBundle:Security:logout }
+    defaults:  { _controller: CaravaneUserBundle:Security:logout }
     options:
         expose: true

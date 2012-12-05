@@ -1,0 +1,20 @@
+{% extends "CaravaneUserBundle::layout.html.twig" %}
+
+	{% block main %}<h1>Lunch creation</h1>
+
+<form action="{{ path('user_lunch_create') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <p>
+        <button type="submit">Create</button>
+    </p>
+</form>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('user_lunch') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}
+

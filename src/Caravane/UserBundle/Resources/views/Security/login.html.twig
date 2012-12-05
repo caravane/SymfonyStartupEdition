@@ -21,15 +21,17 @@
         </div>
     {% endif %}
     <div id="social_login">
-{% if app.user.getFacebookId %}
+{#% if app.user %#}<p>
+{% if is_granted("ROLE_USER") %}
     <a class="btn btn-large btn-primary btn-block" href="{{path('fos_user_security_logout')}}">Logout</a>
 {% else %}
 
-            <button class="btn btn-large btn-primary btn-block" onclick="fb_login();">Login with facebook</button>
+
+            <a class="btn btn-large btn-primary " onclick="fb_login();">Login with Facebook &raquo;</a>
+
+            <a class="btn btn-large btn-primary "  href="{{ path ('login_twitter')}}">Login with Twitter &raquo;</a>
+            <a class="btn btn-large btn-primary " href="{{path('login_google')}}">Login with Google &raquo;</a>
+            {#{ google_login_button() }#}
         {% endif %}
+    </p>
     </div>
-
-
-
-
-
