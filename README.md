@@ -64,3 +64,12 @@ Create MongoDB schema
 ``` bash
 php app/console doctrine:mongodb:schema:create
 ```
+
+
+
+Customize TwitterBootstrap
+========================
+- Edit file src/Caravane/NooneatBundle/resources/public/ccc/variables.less
+- dump assets, clear cache
+
+```
