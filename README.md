@@ -74,4 +74,4 @@ Customize TwitterBootstrap
 
 
 
-![ScreenShot](https://github.com/caravane/SymfonyStartupEdition/blob/master/web/images/screenshot.png)
+![ScreenShot](/caravane/SymfonyStartupEdition/blob/master/web/images/screenshot.png)
