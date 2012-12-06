@@ -1,19 +1,19 @@
-<?php
 namespace Caravane\UserBundle\Entity;
 
 use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
- * @MongoDB\Document
+ * @ORM\Entity
  */
 class User extends BaseUser
 {
     /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
+    * @ORM\Id
+    * @ORM\Column(type="integer")
+    * @ORM\generatedValue(strategy="AUTO")
+    */
     protected $id;
 
     /**
