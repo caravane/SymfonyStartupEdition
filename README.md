@@ -100,6 +100,7 @@ Customize TwitterBootstrap
 Warning: use CaravaneBootsrap version (as in composer.json, to allow app to get variables from the bundle resources folder)
 - Edit file src/Caravane/NooneatBundle/resources/public/css/variables.less (or http://www.boottheme.com/#generatetheme ? )
 - Clean up
+
 ``` bash
    php app/console assets:install
    php app/console assetic:dump
