@@ -1,3 +1,4 @@
+<?php
 namespace Caravane\UserBundle\Entity;
 
 use FOS\UserBundle\Entity\User as BaseUser;
