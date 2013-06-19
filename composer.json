@@ -28,7 +28,7 @@
         "jquery/jquery": "1.9.*",
         "jquery/jquery-ui": "1.9.*",
         "braincrafted/bootstrap-bundle": "dev-master",
-        "twitter/bootstrap": "v2.3.2",
+        "twitter/bootstrap": "2.3.*",
         "leafo/lessphp": "0.3.9",
         "friendsofsymfony/facebook-bundle": "dev-master",
         "friendsofsymfony/user-bundle": "dev-master",
