@@ -27,6 +27,7 @@ class AppKernel extends Kernel
             new FOS\GoogleBundle\FOSGoogleBundle(),
             new Caravane\NooneatBundle\CaravaneNooneatBundle(),
             new Caravane\UserBundle\CaravaneUserBundle(),
+            new Bc\Bundle\BootstrapBundle\BcBootstrapBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

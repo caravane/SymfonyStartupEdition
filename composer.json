@@ -1,61 +1,75 @@
 {
     "name": "symfony/framework-standard-edition",
+    "license": "MIT",
+    "type": "project",
     "description": "Nooneat distribution",
     "autoload": {
         "psr-0": { "": "src/" }
     },
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.1.*",
+        "symfony/symfony": "2.3.*",
         "doctrine/orm": ">=2.2.3,<2.4-dev",
-        "doctrine/doctrine-bundle": "1.0.*",
-        "doctrine/mongodb-odm-bundle": "3.0.*",
-        "twig/extensions": "1.0.*",
-        "symfony/assetic-bundle": "2.1.*",
-        "symfony/swiftmailer-bundle": "2.1.*",
-        "symfony/monolog-bundle": "2.1.*",
-        "sensio/distribution-bundle": "2.1.*",
-        "sensio/framework-extra-bundle": "2.1.*",
-        "sensio/generator-bundle": "2.1.*",
-        "jms/security-extra-bundle": "1.2.*",
-        "jms/di-extra-bundle": "1.1.*",
-        "jms/di-extra-bundle": "1.1.*",
+        "doctrine/doctrine-bundle": "1.2.*",
+        "doctrine/mongodb-odm": "1.0.*@dev",
+        "doctrine/mongodb-odm-bundle": "3.0.*@dev",
+        "doctrine/data-fixtures": "1.0.*@dev",
         "doctrine/doctrine-fixtures-bundle": "dev-master",
-        "jquery/jquery": "master",
-        "jquery/jquery-ui": "master",
-        "twitter/bootstrap": "master",
-        "leafo/lessphp": "0.3.5",
+        "jms/security-extra-bundle": "1.5.*",
+        "jms/di-extra-bundle": "1.4.*",
+        "twig/extensions": "1.0.*",
+        "symfony/assetic-bundle": "2.3.*",
+        "symfony/swiftmailer-bundle": "2.3.*",
+        "symfony/monolog-bundle": "2.3.*",
+        "sensio/distribution-bundle": "2.3.*",
+        "sensio/framework-extra-bundle": "2.3.*",
+        "sensio/generator-bundle": "2.3.*",
+        "incenteev/composer-parameter-handler": "~2.0",
+        "jquery/jquery": "1.9.*",
+        "jquery/jquery-ui": "1.9.*",
+        "braincrafted/bootstrap-bundle": "dev-master",
+        "twitter/bootstrap": "v2.3.2",
+        "leafo/lessphp": "0.3.9",
         "friendsofsymfony/facebook-bundle": "dev-master",
         "friendsofsymfony/user-bundle": "dev-master",
         "friendsofsymfony/twitter-bundle": "dev-master",
+        "kertz/twitteroauth": "dev-master",
         "friendsofsymfony/jsrouting-bundle": "dev-master",
         "bitgandtter/google-bundle": "dev-master",
-	"twitteroauth": "dev-master"
+	    "twitteroauth": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
         "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ]
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "extra": {
         "symfony-app-dir": "app",
-        "symfony-web-dir": "web"
+        "symfony-web-dir": "web",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        },
+        "branch-alias": {
+            "dev-master": "2.3-dev"
+        }
     },
     "repositories": [
          {
             "type": "package",
             "package": {
-                "version": "master",
+                "version": "1.9.1",
                 "name": "jquery/jquery-ui",
                 "dist": {
                     "url": "http://code.jquery.com/ui/1.9.1/jquery-ui.js",
@@ -66,11 +80,11 @@
         {
             "type": "package",
             "package": {
-                "version": "master",
+                "version": "1.9.1",
                 "name": "jquery/jquery",
                 "dist": {
-                    "url": "http://code.jquery.com/jquery-1.8.3.js",
-                    "type":"file"
+                    "url": "http://code.jquery.com/jquery-1.9.1.js",
+                    "type": "file"
                 }
             }
         },
@@ -80,7 +94,7 @@
                "version": "master",
                "name": "twitter/bootstrap",
                "source": {
-		   "url": "https://github.com/caravane/bootstrap",
+		            "url": "https://github.com/caravane/bootstrap",
                    "type": "git",
                    "reference": "master"
                }

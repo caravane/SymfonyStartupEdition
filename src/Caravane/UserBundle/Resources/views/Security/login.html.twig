@@ -1,17 +1,9 @@
-{#% extends "SocialShowerGalleryBundle::default.html.twig" %}
+{% extends "FOSUserBundle::layout.html.twig" %}
 
+{% trans_default_domain 'FOSUserBundle' %}
 
- {% block body %#}
-
-
-
-
-
-
-
-        {{ facebook_initialize({'xfbml': true, 'fbAsyncInit': 'onFbInit();', 'culture': facebookLocale}) }}
-
-
+{% block fos_user_content %}
+    {{ facebook_initialize({'xfbml': true, 'fbAsyncInit': 'onFbInit();', 'culture': facebookLocale}) }}
 
     {% if error %}
         <div class="notice error">
@@ -20,18 +12,42 @@
             <a class="icon close" data-icon="x" href="#close" style="display: inline-block;"></a>
         </div>
     {% endif %}
-    <div id="social_login">
-{#% if app.user %#}<p>
-{% if is_granted("ROLE_USER") %}
-    <a class="btn btn-large btn-primary btn-block" href="{{path('fos_user_security_logout')}}">Logout</a>
-{% else %}
 
+    <form action="{{ path("fos_user_security_check") }}" method="post" class="form-horizontal">
+        <legend>{{ 'security.login.form'|trans }}</legend>
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
 
-            <a class="btn btn-large btn-primary " onclick="fb_login();">Login with Facebook &raquo;</a>
+        <div class="control-group">
+            <label class="control-label" for="username">{{ 'security.login.username'|trans }}</label>
+            <div class="controls">
+                <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+            </div>
+        </div>
 
-            <a class="btn btn-large btn-primary "  href="{{ path ('login_twitter')}}">Login with Twitter &raquo;</a>
-            <a class="btn btn-large btn-primary " href="{{path('login_google')}}">Login with Google &raquo;</a>
-            {#{ google_login_button() }#}
-        {% endif %}
-    </p>
-    </div>
+        <div class="control-group">
+            <label class="control-label" for="password">{{ 'security.login.password'|trans }}</label>
+            <div class="controls">
+                <input type="password" id="password" name="_password" required="required" />
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+            <div class="controls">
+                <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+            </div>
+        </div>
+
+        <div id="social_login" class="form-actions">
+            <input class="btn btn-primary" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+            {% if is_granted("ROLE_USER") %}
+                <a class="btn btn-primary btn-block" href="{{ path('fos_user_security_logout') }}">Logout</a>
+            {% else %}
+                <a class="btn" onclick="fb_login();">Login with Facebook &raquo;</a>
+
+                <a class="btn" href="{{ path('login_twitter') }}">Login with Twitter &raquo;</a>
+                <a class="btn" href="{{ path('login_google') }}">Login with Google &raquo;</a>
+            {% endif %}
+        </div>
+    </form>
+{% endblock fos_user_content %}

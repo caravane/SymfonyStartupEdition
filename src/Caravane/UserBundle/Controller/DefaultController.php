@@ -20,7 +20,7 @@ class DefaultController extends Controller
         {
 
 
-          return $this->render('CaravaneNooneatBundle:Default:login.html.twig',array());
+          return $this->render('CaravaneUserBundle:Security:login.html.twig',array());
 
 
         }
