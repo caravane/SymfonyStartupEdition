@@ -48,7 +48,7 @@ security:
                 provider: my_fos_google_provider
 
             logout:
-                handlers: ["fos_facebook.logout_handler"]
+                handlers: []
                 delete_cookies: ["twitter_anywhere_identity"]
             anonymous:    true
 

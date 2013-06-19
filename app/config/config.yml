@@ -45,7 +45,7 @@ framework:
     validation:      { enable_annotations: true }
     templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
     default_locale:  "%locale%"
-    trust_proxy_headers: false # Whether or not the Request object should trust proxy headers (X_FORWARDED_FOR/HTTP_CLIENT_IP)
+    trusted_proxies: ~
     session:         ~
 
 
@@ -56,6 +56,9 @@ twig:
     globals:
         facebookLocale:          %facebookLocale%
         twitterCallbackUrl:          %twitterCallback_url%
+    form:
+        resources:
+            - "BcBootstrapBundle:Form:form_div_layout.html.twig"
 
 # Assetic Configuration
 assetic:
@@ -74,6 +77,9 @@ assetic:
         lessphp:
           file: %kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php
           apply_to: "\.less$"
+
+bc_bootstrap:
+    less_filter: lessphp
 
 # Doctrine Configuration
 doctrine:
@@ -116,7 +122,6 @@ fos_user:
     user_class: Caravane\UserBundle\Document\User
 
 fos_facebook:
-      file:   %kernel.root_dir%/../vendor/facebook/php-sdk/src/base_facebook.php
       alias:  facebook
       app_id: %facebookAppId%
       secret: %facebookAppSecret%
