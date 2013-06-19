@@ -6,11 +6,11 @@
 
     <!--
     <parameters>
-        <parameter key="caravane_caravane_nooneat.example.class">Caravane\CaravaneNooneatBundle\Example</parameter>
+        <parameter key="caravane_caravane_StartupEdition.example.class">Caravane\CaravaneStartupEditionBundle\Example</parameter>
     </parameters>
 
     <services>
-        <service id="caravane_caravane_nooneat.example" class="%caravane_caravane_nooneat.example.class%">
+        <service id="caravane_caravane_StartupEdition.example" class="%caravane_caravane_StartupEdition.example.class%">
             <argument type="service" id="service_id" />
             <argument>plain_value</argument>
             <argument>%parameter_name%</argument>

@@ -1,5 +1,5 @@
-caravane_caravane_nooneat:
-    resource: "@CaravaneNooneatBundle/Controller/"
+caravane_caravane_startup_edition:
+    resource: "@CaravaneStartupEditionBundle/Controller/"
     type:     annotation
     prefix:   /
 

@@ -25,7 +25,7 @@ class AppKernel extends Kernel
             new FOS\TwitterBundle\FOSTwitterBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new FOS\GoogleBundle\FOSGoogleBundle(),
-            new Caravane\NooneatBundle\CaravaneNooneatBundle(),
+            new Caravane\StartupEditionBundle\CaravaneStartupEditionBundle(),
             new Caravane\UserBundle\CaravaneUserBundle(),
             new Bc\Bundle\BootstrapBundle\BcBootstrapBundle(),
         );

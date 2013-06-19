@@ -2,7 +2,7 @@
     "name": "symfony/framework-standard-edition",
     "license": "MIT",
     "type": "project",
-    "description": "Nooneat distribution",
+    "description": "Startup Edition",
     "autoload": {
         "psr-0": { "": "src/" }
     },

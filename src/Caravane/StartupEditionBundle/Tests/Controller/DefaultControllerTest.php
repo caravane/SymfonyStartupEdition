@@ -1,6 +1,6 @@
 <?php
 
-namespace Caravane\NooneatBundle\Tests\Controller;
+namespace Caravane\StartupEditionBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

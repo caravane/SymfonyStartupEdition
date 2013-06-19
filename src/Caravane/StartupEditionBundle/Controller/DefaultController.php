@@ -1,6 +1,6 @@
 <?php
 
-namespace Caravane\NooneatBundle\Controller;
+namespace Caravane\StartupEditionBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;

@@ -1,7 +1,7 @@
 <?php
 // src/Blogger/BlogBundle/DataFixtures/ORM/CommentFixtures.php
 
-namespace Caravane\LunchBundle\DataFixtures\ORM;
+namespace Caravane\StartupEditionBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
@@ -28,14 +28,7 @@ class CategoryFixtures extends AbstractFixture implements OrderedFixtureInterfac
 	
     public function load(ObjectManager $manager)
     {
-    	$user1=new User();
-    	$user1->setEmail('eric@edgecommunication.be');
-
-
-		$manager->persist($user1);
-		$manager->flush();
-
-        $this->addReference('user-1', $user1);
+    	
     }
 
     public function getOrder()
