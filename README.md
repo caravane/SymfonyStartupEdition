@@ -4,7 +4,7 @@ Symfony Startup Edition
 A symfony ready to use empty app with
 - jquery (http://jquery.com)
 - jquery-ui (http://jquery-ui.com)
-- twitter bootstrap (http://twitter.github.com/bootstrap/)
+- twitter bootstrap (https://github.com/braincrafted/bootstrap-bundle)
 - lessphp (https://github.com/leafo/lessphp)
 - js routing (FOSJsRoutingBundle https://github.com/FriendsOfSymfony/FOSJSRoutingBundle)
 - user (FOSUserBundle https://github.com/FriendsOfSymfony/FOSFUserBundle)
@@ -16,7 +16,7 @@ A symfony ready to use empty app with
 
 Prerequisites
 ========================
-This version requires Symfony 2.1
+This version requires Symfony 2.3
 
 Installation
 ========================
